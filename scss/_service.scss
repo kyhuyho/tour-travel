@@ -1,0 +1,152 @@
+.service {
+  margin-top: 70px;
+  background-color: $bgc-color;
+  padding: 130px 0;
+}
+.service-container {
+  display: flex;
+  justify-content: space-between;
+}
+.service-total {
+  width: calc(20% - 40px);
+}
+.service-list {
+  width: calc(80% - 40px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.service-item {
+  width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.service-title {
+  font-family: $secondary-font;
+  color: $secondary-color;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.service-image {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 25px;
+  background-color: rgba($third-color, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+.service-image img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+.service-desc,
+.service-total-desc {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.service-all {
+  display: block;
+  width: max-content;
+  padding: 15px 30px;
+  background-color: $third-color;
+  color: $fourth-color;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.3s linear;
+}
+.service-all:hover {
+  background-color: rgba($third-color, 0.8);
+}
+.service-caption {
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1919px) {
+  .service {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .service-total {
+    width: calc(20% - 25px);
+  }
+  .service-list {
+    width: calc(80% - 25px);
+  }
+  .service-title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .service {
+    padding: 70px 0;
+  }
+  .service-container {
+    display: block;
+  }
+  .service-total,
+  .service-list {
+    width: 100%;
+  }
+  .service-total {
+    margin-bottom: 30px;
+  }
+  .service-total {
+    text-align: center;
+  }
+  .service-title {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+  .service-all {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .service {
+    padding: 50px 0;
+  }
+  .service-total-desc {
+    font-size: 13px;
+  }
+  .service-list {
+    flex-wrap: wrap;
+  }
+  .service-item {
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .service {
+    margin-top: 50px;
+  }
+  .service-item {
+    width: calc(50% - 20px);
+  }
+  .service-caption {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .service-title {
+    font-size: 40px;
+  }
+  .service-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,349 @@
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  color: #555;
+}
+
+.signin {
+  width: 1200px;
+  display: flex;
+  align-items: stretch;
+  margin: 100px auto;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.signin-left {
+  width: 50%;
+  padding: 50px;
+}
+
+.signin-right {
+  width: 50%;
+}
+
+.signin-right-image {
+  height: 100%;
+}
+
+.signin-right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signin-caption {
+  font-size: 40px;
+  color: #000;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.signin-form {
+  margin-top: 30px;
+}
+
+.signin-label {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  color: #fb845d;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signin-name,
+.signin-pass {
+  border: 1px solid #555;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+
+.signin-pass {
+  padding-right: 40px;
+}
+
+.signin-name:focus,
+.signin-pass:focus {
+  border-color: #fb845d;
+}
+
+.signin-group:first-child {
+  margin-bottom: 20px;
+}
+
+.signin-group:nth-child(2) {
+  position: relative;
+}
+
+.signin-validate {
+  position: relative;
+}
+
+.signin-icon-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.signin-forgot {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  margin-top: 10px;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.3s linear;
+  font-size: 14px;
+}
+
+.signin-forgot:hover {
+  color: #fb845d;
+}
+
+.signin-submit {
+  margin-top: 40px;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  outline: none;
+  background-color: #fb845d;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s linear;
+}
+
+.signin-submit:hover {
+  background-color: rgba(251, 132, 93, 0.8);
+}
+
+.signin-more {
+  margin-top: 35px;
+  text-align: center;
+  position: relative;
+}
+
+.signin-more::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #555;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 50;
+}
+
+.signin-more span {
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+  padding: 10px;
+}
+
+.signin-other {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signin-other-group:first-child {
+  margin-bottom: 20px;
+}
+
+.signin-other-group:first-child,
+.signin-other-group:last-child {
+  width: calc(50% - 10px);
+}
+
+.signin-other-group:first-child .signin-icon {
+  color: #0674e7;
+}
+
+.signin-other-group:last-child .signin-icon {
+  color: #555;
+}
+
+.signin-other-link {
+  padding: 12px;
+  border: 1px solid #555;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.signin-other-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fb845d;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+.signin-other-link:hover {
+  border-color: #fb845d;
+}
+
+.signin-other-link:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.signin-other-link .signin-text {
+  transition: all 0.3s linear;
+}
+
+.signin-other-link:hover .signin-text {
+  color: #fff;
+}
+
+.signin-text {
+  color: #555;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.signin-icon {
+  font-size: 25px;
+}
+
+.signin-already {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-account {
+  color: #fb845d;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.modal-signin {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1111;
+  cursor: pointer;
+}
+
+.modal-signin-content {
+  padding: 0 15px;
+  width: 600px;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 15px;
+}
+
+.modal-signin-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modal-signin-icon {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  background-color: #ff4500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1279px) {
+  .signin {
+    width: 900px;
+    display: block;
+  }
+  .signin-left {
+    width: 100%;
+    padding: 30px;
+  }
+  .signin-right {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .signin {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .signin {
+    width: 350px;
+  }
+  .signin-caption {
+    font-size: 35px;
+  }
+  .signin-left {
+    padding: 20px;
+  }
+  .signin-form {
+    margin-top: 20px;
+  }
+  .signin-other-group:first-child,
+.signin-other-group:last-child {
+    width: calc(50% - 5px);
+  }
+  .modal-signin-content {
+    width: 320px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=signin.css.map */

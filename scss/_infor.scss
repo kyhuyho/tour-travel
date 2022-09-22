@@ -1,0 +1,322 @@
+.infor {
+  position: relative;
+  height: 800px;
+}
+.infor-image-list {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.infor-image-list .slick-list {
+  height: 100%;
+}
+.infor-image-list .slick-list .slick-track {
+  height: 100%;
+}
+.infor-image-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.infor-image-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($sixth-color, 0.2);
+}
+.infor-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.infor-container {
+  position: relative;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.infor-left {
+  width: 508px;
+}
+.infor-title {
+  color: $fourth-color;
+  font-weight: 700;
+  font-family: $secondary-font;
+  font-size: 65px;
+  line-height: 1.2;
+}
+.infor-desc {
+  margin-top: 15px;
+  color: $fourth-color;
+  line-height: 1.5;
+  font-size: 20px;
+}
+.infor-media {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+}
+.infor-play {
+  width: 60px;
+  height: 60px;
+  background-color: $fourth-color;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.infor-play i {
+  font-size: 20px;
+  color: $sixth-color;
+}
+.infor-play::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $fourth-color;
+  border-radius: inherit;
+  animation: scale 1s forwards infinite linear;
+}
+.infor-text {
+  font-size: 20px;
+  margin-left: 15px;
+  color: $fourth-color;
+}
+@keyframes scale {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($sixth-color, 0.9);
+  z-index: 5000;
+  cursor: pointer;
+}
+.modal-video {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.infor-right {
+  width: 650px;
+}
+.infor-find {
+  font-size: 50px;
+  color: $fourth-color;
+  font-family: $secondary-font;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.infor-right-desc {
+  font-size: 30px;
+  color: $fourth-color;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.infor-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.infor-price,
+.infor-destination,
+.infor-duration,
+.infor-amount {
+  width: calc(50% - 10px);
+  display: block;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  outline: none;
+  color: $primary-color;
+  font-family: $primary-font;
+  font-weight: 500;
+}
+.infor-price,
+.infor-destination {
+  margin-bottom: 20px;
+}
+.infor-price:focus,
+.infor-destination:focus,
+.infor-duration:focus,
+.infor-amount:focus {
+  border-color: $third-color;
+}
+.infor-button-search {
+  width: 100%;
+  text-align: center;
+  color: $sixth-color;
+  font-size: 30px;
+  margin: 25px 0;
+  padding: 15px 30px;
+  background-color: $fourth-color;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+.infor-button-search::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: $third-color;
+  z-index: -1;
+  transition: all 0.3s linear;
+  border-radius: inherit;
+}
+.infor-button-search:hover {
+  color: $fourth-color;
+}
+.infor-button-search:hover::before {
+  width: 100%;
+}
+@media screen and (max-width: 1919px) {
+  .infor,
+  .infor-container {
+    height: 750px;
+  }
+  .infor-media {
+    margin-top: 20px;
+  }
+  .modal-video {
+    width: 70%;
+    height: 55%;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .infor,
+  .infor-container {
+    height: 700px;
+  }
+  .infor-title {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .infor-container {
+    padding-top: 50px;
+    display: block;
+  }
+  .infor-left {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .infor-title {
+    font-size: 45px;
+    text-align: center;
+  }
+  .infor-desc {
+    margin-top: 10px;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .infor-media {
+    margin: 10px auto 0;
+  }
+  .infor-right {
+    margin: 20px auto 0;
+  }
+  .infor-find {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  .infor-right-desc {
+    font-size: 25px;
+  }
+  .modal-video {
+    top: 25%;
+    transform: translate(-50%, -25%);
+    height: 30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .infor,
+  .infor-container {
+    height: auto;
+  }
+  .infor-container {
+    padding-top: 30px;
+  }
+  .infor-left,
+  .infor-right {
+    width: 100%;
+  }
+  .infor-title {
+    font-size: 25px;
+  }
+  .infor-desc {
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .infor-play {
+    width: 45px;
+    height: 45px;
+  }
+  .infor-play i {
+    font-size: 18px;
+  }
+  .infor-text {
+    font-size: 18px;
+  }
+  .infor-find {
+    font-size: 22px;
+  }
+  .infor-right-desc {
+    font-size: 18px;
+  }
+  .infor-price,
+  .infor-destination,
+  .infor-duration,
+  .infor-amount {
+    width: 100%;
+    font-size: 18px;
+  }
+  .infor-duration {
+    margin-bottom: 20px;
+  }
+  .infor-button-search {
+    font-size: 22px;
+  }
+  .infor-image-dots {
+    bottom: 15px;
+  }
+  .infor-image-dot-item {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-video {
+    width: 90%;
+    height: 40%;
+  }
+}

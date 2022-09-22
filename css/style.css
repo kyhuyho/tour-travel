@@ -1,0 +1,3084 @@
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  color: #555;
+  transition: all 0.3s linear;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-fixed {
+  padding: 20px 0;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.header-toggle-menu {
+  display: none;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.header-logo-image {
+  font-size: 40px;
+  color: #82d8fb;
+}
+
+.header-logo-text {
+  color: #000;
+  font-size: 40px;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+
+.header-menu-link {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-menu-item:first-child .header-menu-link {
+  color: #000;
+  transition: all 0.2s linear;
+}
+
+.header-menu-item:not(:first-child) .header-menu-link {
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.header-menu-item .header-menu-link:hover {
+  color: #fb845d;
+}
+
+.header-sign {
+  display: flex;
+  gap: 0 30px;
+}
+
+.header-signin,
+.header-signup {
+  color: #000;
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 2px solid #fb845d;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.header-signin:hover,
+.header-signup:hover {
+  background-color: #fb845d;
+  border-color: transparent;
+  color: #fff;
+}
+
+.header-toggle-icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s linear;
+}
+
+.header-box {
+  width: 45px;
+  height: 24px;
+  border: 2px solid #555;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 1px 2px 1px 2px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.header-spin {
+  width: 18px;
+  height: 18px;
+  background-color: #555;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+
+.header-box.is-active {
+  background-color: #fb845d;
+  border-color: transparent;
+}
+
+.header-box.is-active .header-spin {
+  background-color: #fff;
+  transform: translateX(20px);
+}
+
+body.is-active {
+  background-color: #000;
+}
+
+.line-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 5px;
+  background-color: #fb845d;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  z-index: 2000;
+}
+
+@media screen and (max-width: 1439px) {
+  .header-signin,
+.header-signup {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .header-menu-link {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .header-logo-text,
+.header-logo-image {
+    font-size: 30px;
+  }
+  .header-menu,
+.header-sign {
+    gap: 0 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header-logo-text,
+.header-logo-image {
+    font-size: 27px;
+  }
+  .header-menu,
+.header-sign {
+    gap: 0 12px;
+  }
+  .header-menu,
+.header-menu-link {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .header-signin,
+.header-signup {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo-text {
+    font-size: 25px;
+  }
+  .header-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 500;
+    display: block;
+    padding: 55px 20px 20px 20px;
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+  }
+  .header-menu-item {
+    border-bottom: 1px solid #555;
+    margin-bottom: 15px;
+  }
+  .header-menu-link {
+    color: #fff !important;
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+  }
+  .header-icon {
+    color: #fff;
+  }
+  .header-menu-item:hover {
+    background-color: #ff6651;
+  }
+  .header-sign {
+    display: block;
+  }
+  .header-signup {
+    margin: 15px 0;
+  }
+  .header-signin,
+.header-signup {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    color: #fff;
+  }
+  .header-toggle-menu {
+    display: block;
+    font-size: 30px;
+    color: #555;
+    position: relative;
+    z-index: 2000;
+  }
+  .header-box {
+    margin-top: 20px;
+  }
+  .line-effect {
+    display: none;
+  }
+  .header-menu.is-active {
+    transform: translateX(0);
+  }
+}
+.infor {
+  position: relative;
+  height: 800px;
+}
+
+.infor-image-list {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.infor-image-list .slick-list {
+  height: 100%;
+}
+
+.infor-image-list .slick-list .slick-track {
+  height: 100%;
+}
+
+.infor-image-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.infor-image-item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.infor-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infor-container {
+  position: relative;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infor-left {
+  width: 508px;
+}
+
+.infor-title {
+  color: #fff;
+  font-weight: 700;
+  font-family: "Brygada 1918", sans-serif;
+  font-size: 65px;
+  line-height: 1.2;
+}
+
+.infor-desc {
+  margin-top: 15px;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.infor-media {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+}
+
+.infor-play {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.infor-play i {
+  font-size: 20px;
+  color: #000;
+}
+
+.infor-play::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: inherit;
+  animation: scale 1s forwards infinite linear;
+}
+
+.infor-text {
+  font-size: 20px;
+  margin-left: 15px;
+  color: #fff;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5000;
+  cursor: pointer;
+}
+
+.modal-video {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.infor-right {
+  width: 650px;
+}
+
+.infor-find {
+  font-size: 50px;
+  color: #fff;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.infor-right-desc {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.infor-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infor-price,
+.infor-destination,
+.infor-duration,
+.infor-amount {
+  width: calc(50% - 10px);
+  display: block;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  outline: none;
+  color: #555;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.infor-price,
+.infor-destination {
+  margin-bottom: 20px;
+}
+
+.infor-price:focus,
+.infor-destination:focus,
+.infor-duration:focus,
+.infor-amount:focus {
+  border-color: #fb845d;
+}
+
+.infor-button-search {
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  margin: 25px 0;
+  padding: 15px 30px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.infor-button-search::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fb845d;
+  z-index: -1;
+  transition: all 0.3s linear;
+  border-radius: inherit;
+}
+
+.infor-button-search:hover {
+  color: #fff;
+}
+
+.infor-button-search:hover::before {
+  width: 100%;
+}
+
+@media screen and (max-width: 1919px) {
+  .infor,
+.infor-container {
+    height: 750px;
+  }
+  .infor-media {
+    margin-top: 20px;
+  }
+  .modal-video {
+    width: 70%;
+    height: 55%;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .infor,
+.infor-container {
+    height: 700px;
+  }
+  .infor-title {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .infor-container {
+    padding-top: 50px;
+    display: block;
+  }
+  .infor-left {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .infor-title {
+    font-size: 45px;
+    text-align: center;
+  }
+  .infor-desc {
+    margin-top: 10px;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .infor-media {
+    margin: 10px auto 0;
+  }
+  .infor-right {
+    margin: 20px auto 0;
+  }
+  .infor-find {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  .infor-right-desc {
+    font-size: 25px;
+  }
+  .modal-video {
+    top: 25%;
+    transform: translate(-50%, -25%);
+    height: 30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .infor,
+.infor-container {
+    height: auto;
+  }
+  .infor-container {
+    padding-top: 30px;
+  }
+  .infor-left,
+.infor-right {
+    width: 100%;
+  }
+  .infor-title {
+    font-size: 25px;
+  }
+  .infor-desc {
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .infor-play {
+    width: 45px;
+    height: 45px;
+  }
+  .infor-play i {
+    font-size: 18px;
+  }
+  .infor-text {
+    font-size: 18px;
+  }
+  .infor-find {
+    font-size: 22px;
+  }
+  .infor-right-desc {
+    font-size: 18px;
+  }
+  .infor-price,
+.infor-destination,
+.infor-duration,
+.infor-amount {
+    width: 100%;
+    font-size: 18px;
+  }
+  .infor-duration {
+    margin-bottom: 20px;
+  }
+  .infor-button-search {
+    font-size: 22px;
+  }
+  .infor-image-dots {
+    bottom: 15px;
+  }
+  .infor-image-dot-item {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-video {
+    width: 90%;
+    height: 40%;
+  }
+}
+.explore {
+  margin-top: 100px;
+  /*  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.2s linear; */
+}
+
+/* .explore.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+} */
+.explore-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.explore-left {
+  width: 420px;
+}
+
+.explore-right {
+  width: 420px;
+  transform: translateX(-110px);
+}
+
+.explore-caption {
+  font-size: 46px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.explore-desc-first,
+.explore-desc-second {
+  margin-top: 35px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.explore-desc-second {
+  margin-top: 20px;
+}
+
+.explore-read {
+  margin-top: 30px;
+  display: block;
+  width: max-content;
+  padding: 15px 30px;
+  background-color: #fb845d;
+  color: #fff;
+  border-radius: 30px;
+  position: relative;
+}
+
+.explore-read::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+.explore-read:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.explore-image-parent {
+  position: relative;
+}
+
+.explore-image-inner img {
+  width: 255px;
+  border: 10px solid #fff;
+}
+
+.explore-image-inner {
+  position: absolute;
+  top: 50%;
+  left: -160px;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1919px) {
+  .explore-desc-first {
+    margin-top: 20px;
+  }
+  .explore-desc-second {
+    margin-top: 15px;
+  }
+  .explore-read {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .explore {
+    margin-top: 80px;
+  }
+  .explore-caption {
+    font-size: 43px;
+    line-height: 1;
+  }
+  .explore-right {
+    width: 400px;
+    transform: translateX(-90px);
+  }
+  .explore-image-inner img {
+    width: 230px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .explore-right {
+    width: 300px;
+    transform: translateX(-50px);
+  }
+  .explore-left {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .explore {
+    margin-top: 50px;
+  }
+  .explore-right {
+    transform: translateX(0);
+  }
+  .explore-left {
+    width: 300px;
+  }
+  .explore-caption {
+    font-size: 40px;
+  }
+  .explore-image-inner {
+    left: -100px;
+  }
+  .explore-image-inner img {
+    width: 180px;
+  }
+  .explore-desc-first,
+.explore-desc-second {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media screen and (max-width: 767px) {
+  .explore {
+    margin-top: 30px;
+  }
+  .explore-container {
+    display: block;
+  }
+  .explore-left {
+    width: 100%;
+  }
+  .explore-caption {
+    font-size: 33px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .explore-read {
+    margin: 20px auto;
+  }
+  .explore-right {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .explore-image-inner {
+    width: 160px;
+    left: -70px;
+  }
+}
+.service {
+  margin-top: 70px;
+  background-color: #f7f7f7;
+  padding: 130px 0;
+}
+
+.service-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-total {
+  width: calc(20% - 40px);
+}
+
+.service-list {
+  width: calc(80% - 40px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.service-item {
+  width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-title {
+  font-family: "Brygada 1918", sans-serif;
+  color: #343661;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.service-image {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 25px;
+  background-color: rgba(251, 132, 93, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.service-image img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.service-desc,
+.service-total-desc {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.service-all {
+  display: block;
+  width: max-content;
+  padding: 15px 30px;
+  background-color: #fb845d;
+  color: #fff;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+.service-all:hover {
+  background-color: rgba(251, 132, 93, 0.8);
+}
+
+.service-caption {
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1919px) {
+  .service {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .service-total {
+    width: calc(20% - 25px);
+  }
+  .service-list {
+    width: calc(80% - 25px);
+  }
+  .service-title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .service {
+    padding: 70px 0;
+  }
+  .service-container {
+    display: block;
+  }
+  .service-total,
+.service-list {
+    width: 100%;
+  }
+  .service-total {
+    margin-bottom: 30px;
+  }
+  .service-total {
+    text-align: center;
+  }
+  .service-title {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+  .service-all {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .service {
+    padding: 50px 0;
+  }
+  .service-total-desc {
+    font-size: 13px;
+  }
+  .service-list {
+    flex-wrap: wrap;
+  }
+  .service-item {
+    width: calc(50% - 30px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .service {
+    margin-top: 50px;
+  }
+  .service-item {
+    width: calc(50% - 20px);
+  }
+  .service-caption {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .service-title {
+    font-size: 40px;
+  }
+  .service-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.popular {
+  margin-top: 100px;
+}
+
+.popular-caption {
+  font-size: 46px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.popular-caption::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  background-color: #fb845d;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popular-list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 400px 400px;
+  grid-gap: 40px;
+  grid-template-areas: "h1 h1 h2" "h3 h4 h5";
+}
+
+.popular-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.popular-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-item:first-child {
+  grid-area: h1;
+}
+
+.popular-item:nth-child(2) {
+  grid-area: h2;
+}
+
+.popular-item:nth-child(3) {
+  grid-area: h3;
+}
+
+.popular-item:nth-child(4) {
+  grid-area: h4;
+}
+
+.popular-item:last-child {
+  grid-area: h5;
+}
+
+.popular-country {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 25px;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lightbox-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.lightbox-content i {
+  font-size: 40px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.lightbox-content i:hover {
+  color: #fff;
+  background-color: #fb845d;
+}
+
+.lightbox-prev {
+  left: -70px;
+}
+
+.lightbox-next {
+  right: -70px;
+}
+
+.lightbox-image {
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1279px) {
+  .popular {
+    margin-top: 50px;
+  }
+  .popular-list {
+    margin-top: 35px;
+    grid-template-rows: 300px 300px;
+    grid-gap: 25px;
+  }
+  .popular-country {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .lightbox-content {
+    top: -20%;
+  }
+  .lightbox-image {
+    width: 550px;
+    height: 450px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .popular-list {
+    margin-top: 35px;
+    grid-template-rows: 250px 250px;
+    grid-gap: 25px;
+  }
+  .popular-country {
+    font-size: 18px;
+  }
+  .lightbox-content {
+    top: -10%;
+  }
+  .lightbox-image {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 767px) {
+  .popular {
+    margin-top: 30px;
+  }
+  .popular-caption {
+    font-size: 32px;
+  }
+  .popular-list {
+    margin-top: 20px;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-template-areas: "h1 h2 h3 h4 h5";
+    grid-auto-columns: 80%;
+    grid-auto-flow: column;
+    grid-gap: 0 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .popular-list::-webkit-scrollbar {
+    display: none;
+  }
+  .popular-item {
+    scroll-snap-align: center;
+  }
+  .lightbox-content {
+    top: -5%;
+  }
+  .lightbox-content i {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+  .lightbox-prev {
+    left: -50px;
+  }
+  .lightbox-next {
+    right: -50px;
+  }
+  .lightbox-image {
+    width: 300px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 379px) {
+  .lightbox-content i {
+    width: 35px;
+    height: 35px;
+  }
+  .lightbox-prev {
+    left: -35px;
+  }
+  .lightbox-next {
+    right: -35px;
+  }
+}
+.tour {
+  margin-top: 100px;
+}
+
+.tour-caption {
+  text-align: center;
+  font-size: 46px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.tour-caption::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  background-color: #fb845d;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tour-all {
+  color: #fb845d;
+  display: block;
+  font-size: 18px;
+  width: max-content;
+  font-weight: 500;
+  margin: 20px auto 0;
+}
+
+.tour-all i {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.tour-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour-image {
+  height: 230px;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.tour-image img:hover {
+  transform: scale(1.2);
+}
+
+.tour-item {
+  width: calc(25% - 18.75px);
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.tour-best-seller,
+.tour-special-offer {
+  position: absolute;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #fb845d;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.tour-content {
+  padding: 25px 20px;
+  height: calc(100% - 230px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-intro a {
+  font-size: 20px;
+  font-family: "Brygada 1918", sans-serif;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s linear;
+}
+
+.tour-intro a:hover {
+  color: #fb845d;
+}
+
+.tour-time {
+  margin-top: 15px;
+}
+
+.tour-time i {
+  color: #fb845d;
+}
+
+.tour-text-time,
+.tour-text {
+  margin-left: 5px;
+  color: #000;
+}
+
+.tour-refer {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tour-evaluate {
+  display: flex;
+  align-items: center;
+}
+
+.tour-evaluate i {
+  color: #ffa11a;
+  font-size: 13px;
+}
+
+.tour-evaluate span {
+  font-size: 13px;
+}
+
+.tour-from {
+  display: block;
+  font-size: 18px;
+  color: #000;
+}
+
+.tour-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tour-number {
+  font-size: 23px;
+  color: #fb845d;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.tour-from.sale {
+  position: relative;
+}
+
+.tour-from.sale::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #555;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1919px) {
+  .tour {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .tour {
+    margin-top: 70px;
+  }
+  .tour-list {
+    margin-top: 40px;
+  }
+  .tour-intro {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .tour {
+    margin-top: 50px;
+  }
+  .tour-image {
+    height: 350px;
+  }
+  .tour-content {
+    height: calc(100% - 350px);
+  }
+  .tour-list {
+    flex-wrap: wrap;
+  }
+  .tour-intro {
+    font-size: 23px;
+  }
+  .tour-item {
+    width: calc(50% - 10px);
+  }
+  .tour-item:first-child,
+.tour-item:nth-child(2) {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .tour-image {
+    height: 250px;
+  }
+  .tour-content {
+    height: calc(100% - 250px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .tour {
+    margin-top: 30px;
+  }
+  .tour-caption {
+    font-size: 33px;
+  }
+  .tour-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-auto-columns: 80%;
+    grid-auto-flow: column;
+    grid-gap: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .tour-list::-webkit-scrollbar {
+    display: none;
+  }
+  .tour-intro {
+    font-size: 18px;
+  }
+  .tour-item {
+    width: 100%;
+    scroll-snap-align: center;
+  }
+  .tour-item:first-child,
+.tour-item:nth-child(2) {
+    margin-bottom: 0;
+  }
+}
+.destination {
+  margin-top: 90px;
+}
+
+.destination-content {
+  width: 600px;
+}
+
+.destination-caption {
+  font-size: 46px;
+  font-family: "Brygada 1918", sans-serif;
+  color: #343661;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.destination-desc {
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+.destination-list {
+  margin-top: 65px;
+}
+
+.destination-list .slick-list {
+  height: 100%;
+}
+
+.destination-list .slick-list .slick-track {
+  height: 100%;
+}
+
+.destination-list .slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 70px);
+  display: flex !important;
+  gap: 0 15px;
+}
+
+.destination-list .slick-dots button {
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #efefef;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.destination-list .slick-dots .slick-active button {
+  background-color: #fb845d;
+}
+
+.destination-item {
+  margin: 0 15px;
+}
+
+.destination-image {
+  height: 510px;
+}
+
+.slick-destination-arrow {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-43%);
+  width: 55px;
+  height: 55px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  outline: none;
+  border: 0;
+  z-index: 2;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s linear;
+}
+
+.slick-destination-arrow:hover {
+  background-color: #fb845d;
+  color: #fff;
+}
+
+.destination-list .slick-next {
+  right: 10px;
+}
+
+.destination-list .slick-prev {
+  left: 10px;
+}
+
+.destination-image {
+  position: relative;
+}
+
+.destination-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+
+.destination-image img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destination-price {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.destination-country {
+  display: block;
+  margin-top: 30px;
+  font-size: 27px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.destination-name {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1439px) {
+  .destination-country {
+    font-size: 24px;
+  }
+  .slick-destination-arrow {
+    top: 40%;
+    transform: translateY(-40%);
+  }
+}
+@media screen and (max-width: 1279px) {
+  .destination {
+    margin-top: 70px;
+  }
+  .destination-list {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .destination {
+    margin-top: 50px;
+  }
+  .destination-list {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .destination {
+    margin-top: 30px;
+  }
+  .destination-content {
+    width: 100%;
+  }
+  .destination-caption {
+    font-size: 33px;
+    text-align: center;
+  }
+  .destination-desc {
+    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .destination-image {
+    height: 450px;
+  }
+}
+.recommend {
+  margin-top: 120px;
+}
+
+.recommend-caption {
+  text-align: center;
+  font-size: 46px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.recommend-caption::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  background-color: #fb845d;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.recommend-all {
+  color: #fb845d;
+  display: block;
+  width: max-content;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px auto 0;
+}
+
+.recommend-all i {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.recommend-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommend-image {
+  height: 230px;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.recommend-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.recommend-image img:hover {
+  transform: scale(1.2);
+}
+
+.recommend-item {
+  width: calc(25% - 18.75px);
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.recommend-best-seller {
+  position: absolute;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #fb845d;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.recommend-content {
+  padding: 25px 20px;
+  height: calc(100% - 230px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recommend-intro a {
+  font-size: 20px;
+  font-family: "Brygada 1918", sans-serif;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s linear;
+}
+
+.recommend-intro a:hover {
+  color: #fb845d;
+}
+
+.recommend-time {
+  margin-top: 15px;
+}
+
+.recommend-time i {
+  color: #fb845d;
+}
+
+.recommend-text-time,
+.recommend-text {
+  margin-left: 5px;
+  color: #000;
+}
+
+.recommend-refer {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommend-evaluate {
+  display: flex;
+  align-items: center;
+}
+
+.recommend-evaluate i {
+  color: #ffa11a;
+  font-size: 13px;
+}
+
+.recommend-evaluate span {
+  font-size: 13px;
+}
+
+.recommend-from {
+  display: block;
+  font-size: 18px;
+  color: #000;
+}
+
+.recommend-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.recommend-number {
+  font-size: 23px;
+  color: #fb845d;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.recommend-from.sale {
+  position: relative;
+}
+
+.recommend-from.sale::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #555;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1919px) {
+  .recommend {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .recommend-list {
+    margin-top: 40px;
+  }
+  .recommend-intro {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .recommend {
+    margin-top: 90px;
+  }
+  .recommend-image {
+    height: 350px;
+  }
+  .recommend-content {
+    height: calc(100% - 350px);
+  }
+  .recommend-list {
+    flex-wrap: wrap;
+  }
+  .recommend-intro {
+    font-size: 23px;
+  }
+  .recommend-item {
+    width: calc(50% - 10px);
+  }
+  .recommend-item:first-child,
+.recommend-item:nth-child(2) {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .recommend-image {
+    height: 250px;
+  }
+  .recommend-content {
+    height: calc(100% - 250px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .recommend-caption {
+    font-size: 33px;
+  }
+  .recommend-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-auto-columns: 80%;
+    grid-auto-flow: column;
+    grid-gap: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .recommend-list::-webkit-scrollbar {
+    display: none;
+  }
+  .recommend-intro {
+    font-size: 18px;
+  }
+  .recommend-item {
+    width: 100%;
+    scroll-snap-align: center;
+  }
+  .recommend-item:first-child,
+.recommend-item:nth-child(2) {
+    margin-bottom: 0;
+  }
+}
+.memory {
+  margin-top: 100px;
+}
+
+.memory-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.memory-left {
+  width: 550px;
+}
+
+.memory-caption {
+  font-size: 46px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.memory-desc-first,
+.memory-desc-second {
+  margin-top: 35px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.memory-desc-second {
+  margin-top: 20px;
+}
+
+.memory-read {
+  margin-top: 30px;
+  display: block;
+  width: max-content;
+  padding: 15px 30px;
+  background-color: #fb845d;
+  color: #fff;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+.memory-read:hover {
+  background-color: rgba(251, 132, 93, 0.8);
+}
+
+.memory-right {
+  width: 530px;
+  height: 700px;
+}
+
+.memory-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1919px) {
+  .memory-desc-first {
+    margin-top: 20px;
+  }
+  .memory-desc-second {
+    margin-top: 15px;
+  }
+  .memory-read {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .memory-caption {
+    font-size: 43px;
+    line-height: 1;
+  }
+  .memory-left,
+.memory-right {
+    width: 500px;
+  }
+  .memory-right {
+    height: 680px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .memory {
+    margin-top: 90px;
+  }
+  .memory-right,
+.memory-left {
+    width: 450px;
+  }
+  .memory-right {
+    height: 630px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .memory {
+    margin-top: 70px;
+  }
+  .memory-left {
+    width: 350px;
+  }
+  .memory-caption {
+    font-size: 40px;
+  }
+  .memory-desc-first,
+.memory-desc-second {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .memory-right {
+    width: 350px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .memory {
+    margin-top: 40px;
+  }
+  .memory-container {
+    display: block;
+  }
+  .memory-caption {
+    font-size: 33px;
+  }
+  .memory-caption {
+    text-align: center;
+  }
+  .memory-left,
+.memory-right {
+    width: 100%;
+  }
+  .memory-read {
+    margin: 20px auto;
+  }
+}
+.testimonial {
+  margin-top: 120px;
+  background-color: #f7f7f7;
+  padding: 120px 30px;
+}
+
+.testimonial-caption {
+  font-size: 46px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.testimonial-caption::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  background-color: #fb845d;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonial-list {
+  display: flex;
+  margin-top: 50px;
+  height: 450px;
+}
+
+.testimonial-list .slick-dots {
+  position: absolute;
+  display: flex !important;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 70px);
+  gap: 0 15px;
+}
+
+.testimonial-list .slick-dots button {
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #efefef;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.testimonial-list .slick-dots .slick-active button {
+  background-color: #fb845d;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  margin: 0 15px;
+  padding: 30px 30px 0 35px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.testimonial-infor {
+  text-align: center;
+}
+
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.testimonial-name {
+  font-size: 18px;
+  color: #fb845d;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.testimonial-business {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.testimonial-comment {
+  line-height: 1.3;
+  text-align: center;
+}
+
+.slick-testimonial-arrow {
+  position: absolute;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  outline: none;
+  width: 55px;
+  height: 55px;
+  font-size: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.testimonial-list .slick-list {
+  height: 100%;
+}
+
+.testimonial-list .slick-list .slick-track {
+  height: 100%;
+}
+
+.slick-testimonial-arrow:hover {
+  color: #fff;
+  background-color: #fb845d;
+}
+
+.testimonial-list .slick-prev {
+  left: -20px;
+}
+
+.testimonial-list .slick-next {
+  right: -20px;
+}
+
+@media screen and (max-width: 1439px) {
+  .testimonial {
+    margin-top: 100px;
+    padding: 100px 30px;
+  }
+}
+@media screen and (max-width: 1239px) {
+  .testimonial {
+    padding: 80px 20px 100px 20px;
+  }
+  .testimonial-list {
+    margin-top: 40px;
+    height: 450px;
+  }
+  .testimonial-item {
+    padding: 30px 20px 0 20px;
+  }
+  .testimonial-business {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .testimonial {
+    margin-top: 50px;
+    padding: 50px 20px 100px 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .testimonial-caption {
+    font-size: 35px;
+  }
+}
+.question {
+  margin-top: 120px;
+}
+
+.question-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-left {
+  width: 550px;
+  height: 720px;
+}
+
+.question-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.question-right {
+  width: 550px;
+}
+
+.question-caption {
+  font-size: 46px;
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+}
+
+.question-icon {
+  color: #555;
+  font-weight: bold;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+
+.question-text {
+  display: inline-block;
+  margin-left: 5px;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+
+.question-list {
+  margin-top: 20px;
+}
+
+.question-item-top {
+  padding: 20px 0 20px 15px;
+  border: 1px solid #555;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+
+.question-content {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.question-content-inner {
+  padding: 20px 15px;
+  line-height: 1.3;
+  border: 1px solid #555;
+  font-family: "Brygada 1918", sans-serif;
+}
+
+.question-item-top.is-active {
+  background-color: #fb845d;
+}
+
+.question-item-top.is-active .question-text {
+  color: #fff;
+  font-weight: 700;
+}
+
+.question-item-top.is-active .question-icon {
+  color: #fff;
+}
+
+.question-content.is-active {
+  height: auto;
+}
+
+@media screen and (max-width: 1439px) {
+  .question {
+    margin-top: 90px;
+  }
+  .question-left {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .question {
+    margin-top: 70px;
+  }
+  .question-right,
+.question-left {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .question {
+    margin-top: 50px;
+  }
+  .question-container {
+    display: block;
+  }
+  .question-left,
+.question-right {
+    width: 100%;
+  }
+  .question-left {
+    height: 650px;
+  }
+  .question-caption {
+    text-align: center;
+  }
+  .question-right {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .question {
+    margin-top: 40px;
+  }
+  .question-left {
+    height: 600px;
+  }
+  .question-caption {
+    font-size: 35px;
+  }
+  .question-text {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .question-content-inner {
+    font-size: 14px;
+  }
+}
+.post {
+  margin-top: 150px;
+}
+
+.post-caption {
+  font-size: 46px;
+  font-family: "Brygada 1918", sans-serif;
+  color: #343661;
+  font-weight: 700;
+}
+
+.post-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-item {
+  width: calc(25% - 18px);
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.post-image {
+  height: 230px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.post-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(251, 132, 93, 0.5), rgba(255, 161, 26, 0.5));
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.post-image:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.post-content {
+  padding: 25px;
+}
+
+.post-date {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.post-link-title {
+  margin-bottom: 10px;
+}
+
+.post-link-title a {
+  font-size: 18px;
+  color: #000;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  transition: all 0.3s linear;
+}
+
+.post-link-title a:hover {
+  color: #fb845d;
+}
+
+.post-desc {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.post-more {
+  width: max-content;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #fb845d;
+  transition: all 0.3s linear;
+}
+
+.post-more:hover {
+  border-bottom-color: transparent;
+}
+
+.post-more:hover .post-link-more,
+.post-more:hover i {
+  color: #000;
+}
+
+.post-link-more {
+  font-family: "Brygada 1918", sans-serif;
+  color: #fb845d;
+  font-weight: 700;
+  transition: all 0.3s linear;
+}
+
+.post-more i {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 4px;
+  color: #fb845d;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1919px) {
+  .post {
+    margin-top: 100px;
+  }
+  .post-list {
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .post {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .post {
+    margin-top: 60px;
+  }
+  .post-image {
+    height: 300px;
+  }
+  .post-list {
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  .post-item {
+    width: calc(50% - 18px);
+  }
+  .post-item:first-child,
+.post-item:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .post {
+    margin-top: 50px;
+  }
+  .post-image {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .post {
+    margin-top: 30px;
+  }
+  .post-caption {
+    font-size: 33px;
+  }
+  .post-list {
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-auto-columns: 80%;
+    grid-auto-flow: column;
+    grid-gap: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .post-list::-webkit-scrollbar {
+    display: none;
+  }
+  .post-item {
+    width: 100%;
+    scroll-snap-align: center;
+  }
+  .post-item:first-child,
+.post-item:nth-child(2) {
+    margin-bottom: 0;
+  }
+}
+.contact {
+  margin-top: 100px;
+}
+
+.contact-caption {
+  color: #343661;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+}
+
+.contact-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.contact-left {
+  width: calc(40% - 20px);
+}
+
+.contact-right {
+  width: calc(60% - 20px);
+}
+
+.contact-left-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-left-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fb845d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.contact-content {
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.contact-content-text,
+.contact-content-date {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-group:first-child,
+.contact-group:nth-child(2) {
+  width: calc(50% - 12px);
+  margin-bottom: 20px;
+}
+
+.contact-group:nth-child(3),
+.contact-group:nth-child(4) {
+  width: 100%;
+}
+
+.contact-group input,
+.contact-group textarea {
+  border: 1px solid #555;
+  padding: 20px;
+  font-size: 18px;
+  color: #555;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s linear;
+  display: block;
+  width: 100%;
+}
+
+.contact-group:nth-child(2) {
+  position: relative;
+}
+
+.contact-group:nth-child(2) .contact-email {
+  padding-right: 50px;
+}
+
+.contact-icons {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icons i {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+.contact-icons .fa-check {
+  background-color: #20e3b2;
+}
+
+.contact-icons .fa-times {
+  background-color: #ff4500;
+}
+
+.contact-email.valid + .contact-icons .fa-check {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-email.invalid + .contact-icons .fa-times {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-message {
+  margin-top: 20px;
+  height: 200px;
+  resize: none;
+}
+
+.contact-name:focus,
+.contact-email:focus,
+.contact-subject:focus,
+.contact-message:focus {
+  border-color: #fb845d;
+}
+
+.contact-send {
+  padding: 15px 30px;
+  border: 0;
+  font-size: 20px;
+  background-color: #fb845d;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 30px;
+  position: relative;
+}
+
+.contact-send::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+.contact-send:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 1919px) {
+  .contact {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .contact {
+    margin-top: 50px;
+  }
+  .contact-wrap {
+    margin-top: 30px;
+  }
+  .contact-content {
+    font-size: 14px;
+  }
+  .contact-group input,
+.contact-group textarea {
+    padding: 15px;
+  }
+  .contact-icons {
+    right: 30px;
+  }
+  .contact-group:nth-child(2) .contact-email {
+    padding-right: 40px;
+  }
+  .contact-icons i {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+  }
+  .contact-message {
+    height: 150px;
+  }
+  .contact-left-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .contact-content {
+    font-size: 12px;
+  }
+  .contact-group input,
+.contact-group textarea {
+    font-size: 14px;
+  }
+  .contact-message {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    margin-top: 30px;
+  }
+  .contact-caption {
+    font-size: 33px;
+  }
+  .contact-wrap {
+    display: block;
+  }
+  .contact-left,
+.contact-right {
+    width: 100%;
+  }
+  .contact-right {
+    margin-top: 20px;
+  }
+  .contact-group input,
+.contact-group textarea {
+    padding: 10px;
+  }
+  .contact-message {
+    height: 100px;
+  }
+  .contact-group:first-child,
+.contact-group:nth-child(2) {
+    width: calc(50% - 10px);
+  }
+  .contact-send {
+    font-size: 16px;
+  }
+}
+.footer {
+  margin-top: 100px;
+  background-color: #efefef;
+  padding-bottom: 30px;
+}
+
+.footer-top {
+  padding: 50px 0;
+  background-color: #fb845d;
+}
+
+.footer-top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-top-caption {
+  color: #fff;
+  font-family: "Brygada 1918", sans-serif;
+  font-size: 30px;
+}
+
+.footer-top-get {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: all 0.3s linear;
+}
+
+.footer-top-get:hover {
+  color: #fb845d;
+  background-color: #fff;
+}
+
+.footer-main {
+  margin-top: 70px;
+}
+
+.footer-main-container {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+
+.footer-wrap-column {
+  width: calc(35% - 20px);
+}
+
+.footer-wrap-columns {
+  width: calc(65% - 20px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  color: #000;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.footer-desc {
+  margin-top: 45px;
+  line-height: 1.3;
+}
+
+.footer-text {
+  color: #000;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.footer-social-list {
+  margin-top: 30px;
+  display: flex;
+  gap: 0 10px;
+}
+
+.footer-social-link i {
+  font-size: 20px;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+
+.footer-social-item .footer-social-link i:hover {
+  background-color: #fb845d;
+}
+
+.footer-wrap-columns .footer-column:first-child,
+.footer-wrap-columns .footer-column:nth-child(2) {
+  width: calc(30% - 60px);
+}
+
+.footer-wrap-columns .footer-column:last-child {
+  width: calc(40% - 60px);
+}
+
+.footer-item-link:first-child .footer-link {
+  color: #000;
+  font-size: 20px;
+  font-family: "Brygada 1918", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.footer-item-link:not(:first-child) .footer-link {
+  color: #555;
+  display: inline-block;
+}
+
+.footer-item-link:not(:first-child):not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.footer-item-link .footer-link {
+  transition: all 0.3s linear;
+}
+
+.footer-item-link .footer-link:hover {
+  color: #fb845d;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom-text {
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 1439px) {
+  .footer {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .footer {
+    margin-top: 60px;
+  }
+  .footer-top {
+    padding: 40px 0;
+  }
+  .footer-wrap-columns .footer-column:first-child,
+.footer-wrap-columns .footer-column:nth-child(2) {
+    width: calc(30% - 40px);
+  }
+  .footer-wrap-columns .footer-column:last-child {
+    width: calc(40% - 40px);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .footer-top-caption {
+    font-size: 25px;
+  }
+  .footer-desc {
+    font-size: 14px;
+    margin-top: 35px;
+  }
+  .footer-text {
+    margin-top: 30px;
+  }
+  .footer-social-list {
+    margin-top: 20px;
+  }
+  .footer-item-link .footer-link,
+.footer-bottom-text {
+    font-size: 14px;
+  }
+  .footer-wrap-columns .footer-column:first-child,
+.footer-wrap-columns .footer-column:nth-child(2) {
+    width: calc(30% - 10px);
+  }
+  .footer-wrap-columns .footer-column:last-child {
+    width: calc(40% - 10px);
+  }
+  .footer-social-link i {
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-top {
+    padding: 20px 0;
+  }
+  .footer-top-container {
+    display: block;
+    text-align: center;
+  }
+  .footer-top-caption {
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-size: 20px;
+  }
+  .footer-top-get {
+    padding: 10px 20px;
+  }
+  .footer-main {
+    margin-top: 30px;
+  }
+  .footer-columns,
+.footer-wrap-columns {
+    display: block;
+  }
+  .footer-wrap-column,
+.footer-wrap-columns {
+    width: 100%;
+  }
+  .footer-wrap-columns .footer-column {
+    width: 100% !important;
+  }
+  .footer-wrap-columns {
+    margin-top: 20px;
+  }
+  .footer-wrap-column .footer-column,
+.footer-wrap-columns .footer-column {
+    text-align: center;
+  }
+  .footer-wrap-columns .footer-column:not(:first-child) {
+    margin-top: 20px;
+  }
+  .footer-social-list {
+    justify-content: center;
+  }
+  .footer-desc,
+.footer-text {
+    margin-top: 20px;
+  }
+  .footer-item-link:first-child .footer-link {
+    margin-bottom: 15px;
+  }
+  .footer-item-link .footer-link,
+.footer-bottom-text {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

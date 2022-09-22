@@ -1,0 +1,239 @@
+.contact {
+  margin-top: 100px;
+}
+.contact-caption {
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 46px;
+}
+.contact-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.contact-left {
+  width: calc(40% - 20px);
+}
+.contact-right {
+  width: calc(60% - 20px);
+}
+.contact-left-item {
+  display: flex;
+  align-items: center;
+}
+.contact-left-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background-color: $third-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.contact-icon i {
+  color: $fourth-color;
+  font-size: 20px;
+}
+.contact-content {
+  margin-left: 15px;
+  font-weight: 500;
+}
+.contact-content-text,
+.contact-content-date {
+  display: block;
+  margin-bottom: 5px;
+}
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-group:first-child,
+.contact-group:nth-child(2) {
+  width: calc(50% - 12px);
+  margin-bottom: 20px;
+}
+.contact-group:nth-child(3),
+.contact-group:nth-child(4) {
+  width: 100%;
+}
+.contact-group input,
+.contact-group textarea {
+  border: 1px solid $primary-color;
+  padding: 20px;
+  font-size: 18px;
+  color: $primary-color;
+  font-family: $primary-font;
+  font-weight: 500;
+  transition: all 0.3s linear;
+  display: block;
+  width: 100%;
+}
+.contact-group:nth-child(2) {
+  position: relative;
+}
+.contact-group:nth-child(2) .contact-email {
+  padding-right: 50px;
+}
+.contact-icons {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  display: flex;
+  align-items: center;
+}
+.contact-icons i {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $fourth-color;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+.contact-icons .fa-check {
+  background-color: $valid-color;
+}
+.contact-icons .fa-times {
+  background-color: $invalid-color;
+}
+.contact-email.valid + .contact-icons .fa-check {
+  opacity: 1;
+  visibility: visible;
+}
+.contact-email.invalid + .contact-icons .fa-times {
+  opacity: 1;
+  visibility: visible;
+}
+.contact-message {
+  margin-top: 20px;
+  height: 200px;
+  resize: none;
+}
+.contact-name:focus,
+.contact-email:focus,
+.contact-subject:focus,
+.contact-message:focus {
+  border-color: $third-color;
+}
+.contact-send {
+  padding: 15px 30px;
+  border: 0;
+  font-size: 20px;
+  background-color: $third-color;
+  color: $fourth-color;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 30px;
+  position: relative;
+}
+.contact-send::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  background-color: rgba($fourth-color, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+.contact-send:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 1919px) {
+  .contact {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .contact {
+    margin-top: 50px;
+  }
+  .contact-wrap {
+    margin-top: 30px;
+  }
+  .contact-content {
+    font-size: 14px;
+  }
+  .contact-group input,
+  .contact-group textarea {
+    padding: 15px;
+  }
+  .contact-icons {
+    right: 30px;
+  }
+  .contact-group:nth-child(2) .contact-email {
+    padding-right: 40px;
+  }
+  .contact-icons i {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+  }
+  .contact-message {
+    height: 150px;
+  }
+  .contact-left-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .contact-content {
+    font-size: 12px;
+  }
+  .contact-group input,
+  .contact-group textarea {
+    font-size: 14px;
+  }
+  .contact-message {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    margin-top: 30px;
+  }
+  .contact-caption {
+    font-size: 33px;
+  }
+  .contact-wrap {
+    display: block;
+  }
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+  .contact-right {
+    margin-top: 20px;
+  }
+  .contact-group input,
+  .contact-group textarea {
+    padding: 10px;
+  }
+  .contact-message {
+    height: 100px;
+  }
+  .contact-group:first-child,
+  .contact-group:nth-child(2) {
+    width: calc(50% - 10px);
+  }
+  .contact-send {
+    font-size: 16px;
+  }
+}

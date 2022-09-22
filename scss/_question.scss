@@ -1,0 +1,128 @@
+.question {
+  margin-top: 120px;
+}
+.question-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.question-left {
+  width: 550px;
+  height: 720px;
+}
+.question-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.question-right {
+  width: 550px;
+}
+.question-caption {
+  font-size: 46px;
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-weight: 700;
+}
+.question-icon {
+  color: $primary-color;
+  font-weight: bold;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+.question-text {
+  display: inline-block;
+  margin-left: 5px;
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+.question-list {
+  margin-top: 20px;
+}
+.question-item-top {
+  padding: 20px 0 20px 15px;
+  border: 1px solid $primary-color;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+.question-content {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.question-content-inner {
+  padding: 20px 15px;
+  line-height: 1.3;
+  border: 1px solid $primary-color;
+  font-family: $secondary-font;
+}
+.question-item-top.is-active {
+  background-color: $third-color;
+}
+.question-item-top.is-active .question-text {
+  color: $fourth-color;
+  font-weight: 700;
+}
+.question-item-top.is-active .question-icon {
+  color: $fourth-color;
+}
+.question-content.is-active {
+  height: auto;
+}
+@media screen and (max-width: 1439px) {
+  .question {
+    margin-top: 90px;
+  }
+  .question-left {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .question {
+    margin-top: 70px;
+  }
+  .question-right,
+  .question-left {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .question {
+    margin-top: 50px;
+  }
+  .question-container {
+    display: block;
+  }
+  .question-left,
+  .question-right {
+    width: 100%;
+  }
+  .question-left {
+    height: 650px;
+  }
+  .question-caption {
+    text-align: center;
+  }
+  .question-right {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .question {
+    margin-top: 40px;
+  }
+  .question-left {
+    height: 600px;
+  }
+  .question-caption {
+    font-size: 35px;
+  }
+  .question-text {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .question-content-inner {
+    font-size: 14px;
+  }
+}

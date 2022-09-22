@@ -1,0 +1,227 @@
+.header-fixed {
+  padding: 20px 0;
+  background-color: $fourth-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header-toggle-menu {
+  display: none;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.header-logo-image {
+  font-size: 40px;
+  color: #82d8fb;
+}
+.header-logo-text {
+  color: $sixth-color;
+  font-size: 40px;
+  font-family: $secondary-font;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+.header-menu-link {
+  font-size: 20px;
+  font-weight: 500;
+}
+.header-menu-item:first-child .header-menu-link {
+  color: $sixth-color;
+  transition: all 0.2s linear;
+}
+.header-menu-item:not(:first-child) .header-menu-link {
+  color: rgba($sixth-color, 0.5);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.header-menu-item .header-menu-link:hover {
+  color: $third-color;
+}
+.header-sign {
+  display: flex;
+  gap: 0 30px;
+}
+.header-signin,
+.header-signup {
+  color: $sixth-color;
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 2px solid $third-color;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  font-weight: 500;
+}
+.header-signin:hover,
+.header-signup:hover {
+  background-color: $third-color;
+  border-color: transparent;
+  color: $fourth-color;
+}
+.header-toggle-icon {
+  font-size: 35px;
+  cursor: pointer;
+  color: $primary-color;
+  transition: all 0.3s linear;
+}
+.header-box {
+  width: 45px;
+  height: 24px;
+  border: 2px solid $primary-color;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 1px 2px 1px 2px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.header-spin {
+  width: 18px;
+  height: 18px;
+  background-color: $primary-color;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+.header-box.is-active {
+  background-color: $third-color;
+  border-color: transparent;
+}
+.header-box.is-active .header-spin {
+  background-color: $fourth-color;
+  transform: translateX(20px);
+}
+body.is-active {
+  background-color: $sixth-color;
+}
+.line-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 5px;
+  background-color: $third-color;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  z-index: 2000;
+}
+@media screen and (max-width: 1439px) {
+  .header-signin,
+  .header-signup {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .header-menu-link {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .header-logo-text,
+  .header-logo-image {
+    font-size: 30px;
+  }
+  .header-menu,
+  .header-sign {
+    gap: 0 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header-logo-text,
+  .header-logo-image {
+    font-size: 27px;
+  }
+  .header-menu,
+  .header-sign {
+    gap: 0 12px;
+  }
+  .header-menu,
+  .header-menu-link {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .header-signin,
+  .header-signup {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo-text {
+    font-size: 25px;
+  }
+  .header-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: rgba($sixth-color, 0.9);
+    z-index: 500;
+    display: block;
+    padding: 55px 20px 20px 20px;
+    transform: translateX(100%);
+    transition: all 0.3s linear;
+  }
+  .header-menu-item {
+    border-bottom: 1px solid $primary-color;
+    margin-bottom: 15px;
+  }
+  .header-menu-link {
+    color: $fourth-color !important;
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+  }
+  .header-icon {
+    color: $fourth-color;
+  }
+  .header-menu-item:hover {
+    background-color: #ff6651;
+  }
+  .header-sign {
+    display: block;
+  }
+  .header-signup {
+    margin: 15px 0;
+  }
+  .header-signin,
+  .header-signup {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    color: $fourth-color;
+  }
+  .header-toggle-menu {
+    display: block;
+    font-size: 30px;
+    color: $primary-color;
+    position: relative;
+    z-index: 2000;
+  }
+  .header-box {
+    margin-top: 20px;
+  }
+  .line-effect {
+    display: none;
+  }
+  .header-menu.is-active {
+    transform: translateX(0);
+  }
+}

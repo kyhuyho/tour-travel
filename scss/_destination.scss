@@ -1,0 +1,170 @@
+.destination {
+  margin-top: 90px;
+}
+.destination-content {
+  width: 600px;
+}
+.destination-caption {
+  font-size: 46px;
+  font-family: $secondary-font;
+  color: $secondary-color;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.destination-desc {
+  margin-top: 20px;
+  line-height: 1.4;
+}
+.destination-list {
+  margin-top: 65px;
+}
+.destination-list .slick-list {
+  height: 100%;
+}
+.destination-list .slick-list .slick-track {
+  height: 100%;
+}
+.destination-list .slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 70px);
+  display: flex !important;
+  gap: 0 15px;
+}
+.destination-list .slick-dots button {
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  background-color: $fifth-color;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.destination-list .slick-dots .slick-active button {
+  background-color: $third-color;
+}
+.destination-item {
+  margin: 0 15px;
+}
+.destination-image {
+  height: 510px;
+}
+.slick-destination-arrow {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-43%);
+  width: 55px;
+  height: 55px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  outline: none;
+  border: 0;
+  z-index: 2;
+  cursor: pointer;
+  color: $primary-color;
+  transition: all 0.3s linear;
+}
+.slick-destination-arrow:hover {
+  background-color: $third-color;
+  color: $fourth-color;
+}
+.destination-list .slick-next {
+  right: 10px;
+}
+.destination-list .slick-prev {
+  left: 10px;
+}
+.destination-image {
+  position: relative;
+}
+.destination-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($sixth-color, 0.15);
+  border-radius: 15px;
+}
+.destination-image img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.destination-price {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: $fourth-color;
+  font-weight: 500;
+  font-size: 20px;
+}
+.destination-country {
+  display: block;
+  margin-top: 30px;
+  font-size: 27px;
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.destination-name {
+  display: inline-block;
+  margin-top: 10px;
+}
+@media screen and (max-width: 1439px) {
+  .destination-country {
+    font-size: 24px;
+  }
+  .slick-destination-arrow {
+    top: 40%;
+    transform: translateY(-40%);
+  }
+}
+@media screen and (max-width: 1279px) {
+  .destination {
+    margin-top: 70px;
+  }
+  .destination-list {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .destination {
+    margin-top: 50px;
+  }
+  .destination-list {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .destination {
+    margin-top: 30px;
+  }
+  .destination-content {
+    width: 100%;
+  }
+  .destination-caption {
+    font-size: 33px;
+    text-align: center;
+  }
+  .destination-desc {
+    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .destination-image {
+    height: 450px;
+  }
+}

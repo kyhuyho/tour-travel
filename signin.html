@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/signin.css" />
+  </head>
+  <body>
+    <div class="signin">
+      <div class="signin-left">
+        <h1 class="signin-caption">Sign In</h1>
+        <form class="signin-form" autocomplete="off">
+          <div class="signin-group">
+            <label for="username" class="signin-label">User Name</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="signin-name"
+              placeholder="Enter your user name"
+            />
+          </div>
+          <div class="signin-group">
+            <label for="password" class="signin-label">Password</label>
+            <div class="signin-validate">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="signin-pass"
+                placeholder="Enter your password"
+              />
+              <i class="fas fa-eye-slash signin-icon-eye"></i>
+            </div>
+            <a href="#" class="signin-forgot">Forgot your password?</a>
+          </div>
+          <button type="submit" class="signin-submit">Sign In</button>
+        </form>
+        <h3 class="signin-more">
+          <span>Or Sign In With</span>
+        </h3>
+        <div class="signin-other">
+          <div class="signin-other-group">
+            <a href="#" class="signin-other-link">
+              <i class="fa-brands fa-facebook signin-icon"></i>
+              <span class="signin-text">Facebook</span>
+            </a>
+          </div>
+          <div class="signin-other-group">
+            <a href="#" class="signin-other-link">
+              <i class="fa-brands fa-google signin-icon"></i>
+              <span class="signin-text">Google</span>
+            </a>
+          </div>
+        </div>
+        <span class="signin-already"
+          >Already haven't an account?
+          <a href="./signup.html" class="signin-account">Sign up</a></span
+        >
+      </div>
+      <div class="signin-right">
+        <div class="signin-right-image">
+          <img src="./images/sign-img.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="./js/signin.js"></script>
+  </body>
+</html>
